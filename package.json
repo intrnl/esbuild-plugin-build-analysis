@@ -1,0 +1,24 @@
+{
+	"type": "module",
+	"name": "@intrnl/esbuild-plugin-build-analysis",
+	"description": "Performs build-time analysis on esbuild",
+	"version": "0.1.0",
+	"author": "intrnl",
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/intrnl/esbuild-plugin-build-analysis"
+	},
+	"files": [
+		"src/"
+	],
+	"main": "src/index.js",
+	"peerDependencies": {
+		"esbuild": ">=0.13.15"
+	},
+	"dependencies": {
+		"es-module-lexer": "^0.9.3"
+	},
+	"devDependencies": {
+		"esbuild": "^0.13.15"
+	}
+}
