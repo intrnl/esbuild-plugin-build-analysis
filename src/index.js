@@ -19,7 +19,12 @@ export default function buildAnalysisPlugin () {
 
 			// Retrieve normalized output and public path
 			let outDir = path.normalize(build.initialOptions.outdir);
-			let publicPath = path.normalize(build.initialOptions.publicPath);
+			let publicPath = path.normalize(build.initialOptions.publicPath || '.');
+
+			if (publicPath === '.') {
+				console.warn('[build-analysis]', 'unable to optimize because public path is not set correctly');
+				return;
+			}
 
 			if (!publicPath.endsWith('/')) {
 				publicPath += '/';
