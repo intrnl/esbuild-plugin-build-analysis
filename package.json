@@ -2,7 +2,7 @@
 	"type": "module",
 	"name": "@intrnl/esbuild-plugin-build-analysis",
 	"description": "Performs build-time analysis on esbuild",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "intrnl",
 	"license": "MIT",
 	"repository": {

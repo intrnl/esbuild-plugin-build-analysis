@@ -37,6 +37,11 @@ export default function buildAnalysisPlugin () {
 			await lexer.init;
 
 			build.onEnd(async (result) => {
+				if (result.errors.length) {
+					console.warn('[build-analysis]', 'skipping optimization because build has errors');
+					return;
+				}
+
 				const outputs = result.metafile.outputs;
 
 				for (const id in outputs) {
